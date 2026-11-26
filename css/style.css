@@ -1,0 +1,429 @@
+/* ==========================================================================
+   Portfolio 4: AI & Technology
+   Art Direction: Technical RFC & Systems Architecture Blueprint
+   ========================================================================== */
+
+:root {
+  --rfc-bg: #0a0e17;
+  --rfc-surface: #101623;
+  --rfc-code-bg: #06090f;
+  --rfc-border: #1e293b;
+  --rfc-border-strong: #334155;
+  
+  --rfc-text: #e2e8f0;
+  --rfc-text-muted: #94a3b8;
+  --rfc-text-dim: #64748b;
+  
+  --rfc-amber: #f59e0b;
+  --rfc-blue: #38bdf8;
+  --rfc-green: #10b981;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-w: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--rfc-bg);
+  color: var(--rfc-text);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.rfc-header {
+  border-bottom: 1px solid var(--rfc-border);
+  background: rgba(10, 14, 23, 0.96);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 38px;
+  z-index: 1000;
+}
+
+.rfc-header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rfc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--rfc-text);
+}
+
+.rfc-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--rfc-amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.rfc-title-text {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.rfc-nav {
+  display: flex;
+  gap: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rfc-nav a {
+  color: var(--rfc-text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.rfc-nav a:hover {
+  color: var(--rfc-amber);
+}
+
+.rfc-nav-cta {
+  background: var(--rfc-amber);
+  color: #000000 !important;
+  font-weight: 700 !important;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2px;
+}
+
+/* Main Container */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* RFC Specification Document Header */
+.spec-header-block {
+  margin: 3.5rem 0 4rem;
+  border: 1px solid var(--rfc-border);
+  background: var(--rfc-surface);
+  border-radius: 2px;
+}
+
+.spec-meta-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border-bottom: 1px solid var(--rfc-border);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.meta-cell {
+  padding: 0.85rem 1.25rem;
+  border-right: 1px solid var(--rfc-border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.meta-cell:last-child {
+  border-right: none;
+}
+
+.meta-label {
+  color: var(--rfc-text-dim);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.meta-value {
+  color: var(--rfc-text);
+  font-weight: 600;
+}
+
+.spec-content-pad {
+  padding: 2.5rem;
+}
+
+.spec-h1 {
+  font-size: 2.65rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.spec-summary {
+  font-size: 1.18rem;
+  color: var(--rfc-text-muted);
+  line-height: 1.7;
+  max-width: 80ch;
+  border-left: 2px solid var(--rfc-amber);
+  padding-left: 1.5rem;
+}
+
+/* Section Common */
+.spec-section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--rfc-border);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--rfc-amber);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.section-lead {
+  font-size: 1.1rem;
+  color: var(--rfc-text-muted);
+  line-height: 1.7;
+  max-width: 78ch;
+  margin-bottom: 2.5rem;
+}
+
+/* Pipeline Architecture Block (ASCII / Technical Diagram) */
+.pipeline-box {
+  background: var(--rfc-code-bg);
+  border: 1px solid var(--rfc-border);
+  border-radius: 2px;
+  padding: 2rem;
+  font-family: var(--font-mono);
+  margin-bottom: 2.5rem;
+  overflow-x: auto;
+}
+
+.pipeline-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  min-width: 850px;
+}
+
+.pipeline-stage {
+  flex: 1;
+  background: var(--rfc-surface);
+  border: 1px solid var(--rfc-border);
+  padding: 1.25rem;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-id {
+  font-size: 10px;
+  color: var(--rfc-amber);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.stage-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.stage-desc {
+  font-size: 11px;
+  color: var(--rfc-text-muted);
+  line-height: 1.5;
+  font-family: var(--font-sans);
+}
+
+.pipeline-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--rfc-amber);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Specification Text Matrix */
+.spec-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.spec-article {
+  border: 1px solid var(--rfc-border);
+  background: var(--rfc-surface);
+  padding: 2rem;
+  border-radius: 2px;
+}
+
+.spec-article-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.spec-article-body {
+  font-size: 0.98rem;
+  color: var(--rfc-text-muted);
+  line-height: 1.7;
+}
+
+/* Stack Table */
+.tech-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  border: 1px solid var(--rfc-border);
+  background: var(--rfc-surface);
+}
+
+.tech-spec-table th {
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--rfc-amber);
+  border-bottom: 1px solid var(--rfc-border);
+}
+
+.tech-spec-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--rfc-border);
+  color: var(--rfc-text);
+}
+
+.tech-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tech-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tech-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--rfc-blue);
+}
+
+/* Action Buttons */
+.btn-rfc {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--rfc-amber);
+  color: #000000;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-rfc:hover {
+  background: #ffffff;
+}
+
+.btn-rfc-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--rfc-text);
+  border: 1px solid var(--rfc-border-strong);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-rfc-outline:hover {
+  border-color: var(--rfc-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Footer */
+.rfc-footer {
+  padding: 3.5rem 0;
+  background: #06090f;
+  border-top: 1px solid var(--rfc-border);
+  font-size: 12px;
+  color: var(--rfc-text-dim);
+}
+
+.rfc-footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.rfc-footer-links {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+}
+
+.rfc-footer-links a {
+  color: var(--rfc-text-muted);
+  text-decoration: none;
+}
+
+.rfc-footer-links a:hover {
+  color: var(--rfc-amber);
+}
+
+@media (max-width: 768px) {
+  .spec-h1 {
+    font-size: 2.1rem;
+  }
+  .spec-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .rfc-nav {
+    display: none;
+  }
+}

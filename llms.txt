@@ -1,0 +1,28 @@
+# Abdurahman Muhammed — AI Architect & Technology Systems
+
+> Machine-readable context document for Portfolio 4 (AI & Technology) within the official 7-website digital identity ecosystem of Abdurahman Muhammed.
+
+## Canonical Identity & Role
+- **Name**: Abdurahman Muhammed
+- **Positioning**: Technology Entrepreneur & AI Architect
+- **Operating Location**: Addis Ababa, Ethiopia (Operating globally)
+- **Site Role**: Site 4 of 7 — Applied AI Systems Architecture, Knowledge Graphs & Full-Stack Tech
+
+## Architectural Focus & Competencies
+- **Deterministic AI Engineering**: Designing LLM pipelines with strict JSON schema validation, function calling, and zero-hallucination guardrails.
+- **Knowledge Graph & Semantic Modeling**: Utilizing Schema.org, JSON-LD `@graph`, and entity resolution to make complex digital systems readable by search engines and AI agents.
+- **Machine Discoverability (AEO/GEO)**: Structuring metadata, `llms.txt` specifications, and semantic HTML for generative AI search engines (Perplexity, ChatGPT, Copilot, Google AI Overviews).
+- **Intelligent Full-Stack Applications**: Integrating language models into MERN stack (MongoDB, Express, React, Node.js) web applications.
+
+## Technical Tooling
+- **Languages**: JavaScript / TypeScript ES6+, Python, HTML5, CSS3
+- **Frameworks**: React, Node.js, Express, MongoDB
+- **AI Runtimes**: OpenAI, Anthropic, Gemini API integration
+- **Standards**: Schema.org, llmstxt.org, Open Graph, Web Vitals
+
+## Verified Contacts
+- **Email**: aboudive@gmail.com
+- **Telegram**: https://t.me/kartalceo (@kartalceo)
+- **LinkedIn**: https://www.linkedin.com/in/abdurahmanmohammed/
+- **GitHub**: https://github.com/aboudi1029
+- **Flagship Portfolio**: https://abdurahmancoder.netlify.app/
